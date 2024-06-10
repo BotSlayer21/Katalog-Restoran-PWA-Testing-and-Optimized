@@ -2,7 +2,7 @@
     "id": "PWA-1",
     "start_url": "./index.html",
     "name": "Katalog Restoran App",
-    "short_name": "Restoran Lite",
+    "short_name": "Resto",
     "description": "Katalog Restoran yang bagus untuk anda",
     "display": "standalone",
     "background_color": "#FFFFFF",
