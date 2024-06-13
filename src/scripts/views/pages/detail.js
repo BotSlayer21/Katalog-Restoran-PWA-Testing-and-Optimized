@@ -3,16 +3,16 @@
 import { createRestaurantDetail } from '../templates/template-creator';
 import RestaurantSource from '../../data/restaurant-source';
 import UrlParser from '../../routes/url-parser';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import sukaButtonInitiator from '../../utils/suka-button-initiator';
 import CONFIG from '../../globals/config';
 
 const Detail = {
   async render() {
     return `
       <div id="contentdetail" class="contentdetail"></div>
-      <div id="likeButtonContainer"></div>
+      <div id="sukaButtonContainer"></div>
       <div id="reviewFormContainer">
-        <h2 class="title-review">Tambahkan Review Anda</h2>
+        <h2 class="judul-review">Tambahkan Review Anda</h2>
         <form id="reviewForm">
           <label for="reviewName">Nama Anda:</label>
           <input type="text" id="reviewName" name="reviewName" required><br><br>
@@ -21,7 +21,6 @@ const Detail = {
           <button id="title-button" type="submit">Kirim Ulasan</button>
         </form>
       </div>
-   
     `;
   },
 
@@ -31,9 +30,9 @@ const Detail = {
     const restaurantItem = document.querySelector('#contentdetail');
     restaurantItem.innerHTML = createRestaurantDetail(detail.restaurant);
 
-    const likeButtonContainer = document.querySelector('#likeButtonContainer');
-    LikeButtonInitiator.init({
-      likeButtonContainer,
+    const sukaButtonContainer = document.querySelector('#sukaButtonContainer');
+    sukaButtonInitiator.init({
+      sukaButtonContainer,
       restaurant: {
         id: detail.restaurant.id,
         name: detail.restaurant.name,
@@ -79,17 +78,6 @@ const Detail = {
         alert('Failed to add review. Please try again.');
       }
     });
-
-    const updateReviews = async () => {
-      const response = await fetch(`https://restaurant-api.dicoding.dev/review?id=${detail.restaurant.id}`);
-      if (response.ok) {
-        const reviewResponse = await response.json();
-        detail.restaurant.customerReviews = reviewResponse.customerReviews;
-        updateCustomerReviews(detail.restaurant.customerReviews);
-      }
-    };
-
-    await updateReviews();
   },
 };
 

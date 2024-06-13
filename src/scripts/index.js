@@ -7,9 +7,9 @@ import swRegister from './utils/sw-register';
 // eslint-disable-next-line no-unused-vars
 const app = new App({
   button: document.querySelector('#hamburgerButton'),
-  drawer: document.querySelector('#navigationDrawer'),
+  drawer: document.querySelector('#navDrawer'),
   content: document.querySelector('#mainContent'),
-  jumbotron: document.querySelector('#jumbotron'),
+  hero: document.querySelector('#hero'),
 });
 
 window.addEventListener('hashchange', () => {

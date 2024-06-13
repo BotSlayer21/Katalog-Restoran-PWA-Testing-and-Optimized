@@ -5,7 +5,7 @@ const Favorite = {
   async render() {
     return `
     <div class="latest">
-        <h2 class="latesthead">Restoran Yang Disukai</h2>
+        <h2 class="latesthead">Restoran Favorit</h2>
     </div>
     <div id="content" class="content"></div>
     `;

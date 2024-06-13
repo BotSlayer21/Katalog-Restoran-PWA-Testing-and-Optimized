@@ -4,12 +4,12 @@ import routes from '../routes/routes';
 
 class App {
   constructor({
-    button, drawer, content, jumbotron,
+    button, drawer, content, hero,
   }) {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
-    this._jumbotron = jumbotron;
+    this._hero = hero;
     this._initialAppshell();
   }
 
@@ -18,7 +18,7 @@ class App {
       button: this._button,
       drawer: this._drawer,
       content: this._content,
-      jumbotron: this._jumbotron,
+      hero: this._hero,
     });
   }
 

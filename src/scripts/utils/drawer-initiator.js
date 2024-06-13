@@ -1,6 +1,6 @@
 const DrawerInitiator = {
   init({
-    button, drawer, content, jumbotron,
+    button, drawer, content, hero,
   }) {
     button.addEventListener('click', (event) => {
       this._ToogleDrawer(event, drawer);
@@ -10,7 +10,7 @@ const DrawerInitiator = {
       this._closeDrawer(event, drawer);
     });
 
-    jumbotron.addEventListener('click', (event) => {
+    hero.addEventListener('click', (event) => {
       this._closeDrawer(event, drawer);
     });
   },

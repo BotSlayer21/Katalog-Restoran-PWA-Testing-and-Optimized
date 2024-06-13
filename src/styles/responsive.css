@@ -12,16 +12,16 @@
       display: none;
     }
   
-    .app-bar .app-bar__navigation {
+    .app-bar .app-bar__nav {
       position: static;
       width: 100%;
     }
   
-    .app-bar .app-bar__navigation ul li {
+    .app-bar .app-bar__nav ul li {
       display: inline-block;
     }
   
-    .app-bar .app-bar__navigation ul li a {
+    .app-bar .app-bar__nav ul li a {
       display: inline-block;
       width: 120px;
       text-align: center;
@@ -85,7 +85,7 @@
       text-align: left;
     }
   
-    .restaurant_menu {
+    .resto_menu {
       display: flex;
       grid-template-columns: auto auto;
       gap: 20px;
@@ -104,7 +104,7 @@
     .nav-mob {
       display: none;
     }
-    .info_title {
+    .info_judul {
       font-size: 18px;
     }
     .info_city {

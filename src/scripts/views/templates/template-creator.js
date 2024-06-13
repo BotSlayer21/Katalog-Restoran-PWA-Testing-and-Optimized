@@ -2,7 +2,7 @@ import CONFIG from '../../globals/config';
 
 const createRestaurantDetail = (restaurant) => `
   <div id="contentdetail" class="contentdetail">
-    <div class="restaurant_info_detail">
+    <div class="resto_info_detail">
       <h2 class="detail_title">${restaurant.name}</h2>
       <img class="image_detail" crossorigin="anonymous" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}">
       <div class="detail_list">
@@ -17,13 +17,13 @@ const createRestaurantDetail = (restaurant) => `
       </div>
     </div>
     <div class="menuContainer">
-      <div class="foodMenu">
-        <h3 class="InfoFood">Daftar Panganan:</h3>
+      <div class="menuMakan">
+        <h3 class="InfoFood">Daftar Makanan:</h3>
         <ul>
           ${restaurant.menus.foods.map((menu) => `<li>${menu.name}</li>`).join('')}
         </ul>
       </div>
-      <div class="drinkMenu">
+      <div class="menuMinum">
         <h3 class="InfoDrinks">Daftar Minuman:</h3>
         <ul>
           ${restaurant.menus.drinks.map((menu) => `<li>${menu.name}</li>`).join('')}
@@ -47,9 +47,9 @@ const createRestaurantDetail = (restaurant) => `
 const createRestaurantItem = (restaurant) => `
   <div class="contentlist" id="list">
     <a href="/#/detail/${restaurant.id}">
-      <div class="restaurant_info">
+      <div class="resto_info">
         <img class="image" crossorigin="anonymous" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}">
-        <h2 class="info_title">${restaurant.name}</h2>
+        <h2 class="info_judul">${restaurant.name}</h2>
         <p class="info_city">${restaurant.city}</p>
         <p class="info_desc">${restaurant.description.slice(0, 225)}</p>
         <p class="info_rates">Rating: ${restaurant.rating}</p>
@@ -58,14 +58,14 @@ const createRestaurantItem = (restaurant) => `
   </div>
 `;
 
-const createLikeButtonTemplate = () => `
-  <button aria-label="like this resto" id="likeButton" class="like">
+const createsukaButtonTemplate = () => `
+  <button aria-label="suka this resto" id="sukaButton" class="suka">
     <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
 
-const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this resto" id="likeButton" class="like">
+const createsukadButtonTemplate = () => `
+  <button aria-label="unsuka this resto" id="sukaButton" class="suka">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;
@@ -73,6 +73,6 @@ const createLikedButtonTemplate = () => `
 export {
   createRestaurantItem,
   createRestaurantDetail,
-  createLikeButtonTemplate,
-  createLikedButtonTemplate,
+  createsukaButtonTemplate,
+  createsukadButtonTemplate,
 };
