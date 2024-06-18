@@ -38,31 +38,33 @@ body {
   background-color: transparent;
   border: none;
   font-size: 18px;
-  padding: 0.8em;
   cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .app-bar .app-bar__title {
   display: flex;
   align-items: center;
   display: inline-block;
-    min-width: 44px;
-    min-height: 44px;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .app-bar .app-bar__title h1 a {
   color: #F6EEC9;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 20px;
   display: inline-block;
-    min-width: 44px;
-    min-height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 10px;
 }
 
 .app-bar .app-bar__nav {
   position: absolute;
-  top: 68px;
+  top: 60px;
   left: -180px;
   width: 150px;
   transition: all 0.3s;
@@ -79,9 +81,9 @@ body {
   display: inline-block;
   text-decoration: none;
   color: #F6EEC9;
-  padding: 1em;
   margin-bottom: 5px;
-  width: 100%;
+  min-width: 44px;
+  min-height: 44px;
   
 }
 
@@ -298,8 +300,8 @@ main {
   border: 2px solid #F6EEC9;
 }
 
-/* fitur suka */
-.suka {
+/* fitur like */
+.like {
   width: 55px;
   height: 55px;
   display: flex;

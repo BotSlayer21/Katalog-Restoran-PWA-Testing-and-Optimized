@@ -3,20 +3,20 @@
 import { createRestaurantDetail } from '../templates/template-creator';
 import RestaurantSource from '../../data/restaurant-source';
 import UrlParser from '../../routes/url-parser';
-import sukaButtonInitiator from '../../utils/suka-button-initiator';
+import likeButtonInitiator from '../../utils/like-button-initiator';
 import CONFIG from '../../globals/config';
 
 const Detail = {
   async render() {
     return `
       <div id="contentdetail" class="contentdetail"></div>
-      <div id="sukaButtonContainer"></div>
+      <div id="likeButtonContainer"></div>
       <div id="reviewFormContainer">
         <h2 class="judul-review">Tambahkan Review Anda</h2>
         <form id="reviewForm">
           <label for="reviewName">Nama Anda:</label>
           <input type="text" id="reviewName" name="reviewName" required><br><br>
-          <label for="reviewText">Masukan Review Anda:</label><br>
+          <label for="reviewText">Maliken Review Anda:</label><br>
           <textarea id="reviewText" name="reviewText" rows="4" required></textarea><br><br>
           <button id="title-button" type="submit">Kirim Ulasan</button>
         </form>
@@ -30,9 +30,9 @@ const Detail = {
     const restaurantItem = document.querySelector('#contentdetail');
     restaurantItem.innerHTML = createRestaurantDetail(detail.restaurant);
 
-    const sukaButtonContainer = document.querySelector('#sukaButtonContainer');
-    sukaButtonInitiator.init({
-      sukaButtonContainer,
+    const likeButtonContainer = document.querySelector('#likeButtonContainer');
+    likeButtonInitiator.init({
+      likeButtonContainer,
       restaurant: {
         id: detail.restaurant.id,
         name: detail.restaurant.name,
