@@ -15,9 +15,15 @@ const Favorite = {
     const resto = await FavoriteRestoranIdb.getAllRestaurant();
     const restaurantContainer = document.querySelector('#content');
 
-    resto.forEach((restos) => {
-      restaurantContainer.innerHTML += createRestaurantItem(restos);
-    });
+    if (resto.length) {
+      resto.forEach((restos) => {
+        restaurantContainer.innerHTML += createRestaurantItem(restos);
+      });
+    } else {
+      restaurantContainer.innerHTML = `
+      <div class="restaurant-item__not__found">There is no restaurant to be shown</div>
+      `;
+    }
   },
 };
 

@@ -21,4 +21,9 @@ exports.config = {
     I: './steps_file.js',
   },
   name: 'Triantoro Rizky Anggara_resto-apps PWA + Testing Optimized',
+  plugins: {
+    screenshotOnFail: {
+      enabled: false,
+    },
+  },
 };
