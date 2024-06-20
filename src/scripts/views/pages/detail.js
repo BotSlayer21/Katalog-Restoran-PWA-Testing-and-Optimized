@@ -16,7 +16,7 @@ const Detail = {
         <form id="reviewForm">
           <label for="reviewName">Nama Anda:</label>
           <input type="text" id="reviewName" name="reviewName" required><br><br>
-          <label for="reviewText">Maliken Review Anda:</label><br>
+          <label for="reviewText">Masukkan Review Anda:</label><br>
           <textarea id="reviewText" name="reviewText" rows="4" required></textarea><br><br>
           <button id="title-button" type="submit">Kirim Ulasan</button>
         </form>
