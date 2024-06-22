@@ -4,7 +4,7 @@ const createRestaurantDetail = (restaurant) => `
   <div id="contentdetail" class="contentdetail">
     <div class="resto_info_detail">
       <h2 class="detail_title">${restaurant.name}</h2>
-      <img class="image_detail" crossorigin="anonymous" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}">
+      <img loading="lazy" class="image_detail" crossorigin="anonymous" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}">
       <div class="detail_list">
         <h4>City</h4>
         <p class="detail_city">${restaurant.city}</p>
@@ -48,7 +48,7 @@ const createRestaurantItem = (restaurant) => `
   <div class="contentlist" id="list">
     <a href="/#/detail/${restaurant.id}">
       <div class="resto_info">
-        <img class="image" crossorigin="anonymous" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}">
+        <img loading="lazy" class="image" crossorigin="anonymous" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}">
         <h2 class="info_judul">${restaurant.name}</h2>
         <p class="info_city">${restaurant.city}</p>
         <p class="info_desc">${restaurant.description.slice(0, 225)}</p>
