@@ -26,14 +26,6 @@
       width: 120px;
       text-align: center;
       margin: 0;
-
-    .hero {
-      background-image: url(../public/images/hero-image_2-small.jpg);
-      height: 60vh;
-      background-image: -webkit-image-set("../public/images/hero-image_2-small.jpg" 1x);
-      background-image: -webkit-image-set(url("../public/images/hero-image_2-small.jpg") 1x);
-      background-image: image-set("../public/images/hero-image_2-small.jpg" 1x);
-    }
   }
 }
   
@@ -41,9 +33,6 @@
     .hero {
       background-image: url(../public/images/hero-image_2-small.jpg);
       height: 60vh;
-      background-image: -webkit-image-set("../public/images/hero-image_2-small.jpg" 1x);
-      background-image: -webkit-image-set(url("../public/images/hero-image_2-small.jpg") 1x);
-      background-image: image-set("../public/images/hero-image_2-small.jpg" 1x);
     }
   
     .app-bar .app-bar__title h1 a{
@@ -116,13 +105,6 @@
      }
     }
   @media screen and (min-width: 500px) {
-    .hero {
-      background-image: url(../public/images/hero-image_2-small.jpg);
-      height: 60vh;
-      background-image: -webkit-image-set("../public/images/hero-image_2-small.jpg" 1x);
-      background-image: -webkit-image-set(url("../public/images/hero-image_2-small.jpg") 1x);
-      background-image: image-set("../public/images/hero-image_2-small.jpg" 1x);
-    }
     .nav-mob {
       display: none;
     }
@@ -143,13 +125,6 @@
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 10px;
       grid-row-gap: 15px;
-    }
-    .hero {
-      background-image: url(../public/images/hero-image_2-small.jpg);
-      height: 60vh;
-      background-image: -webkit-image-set("../public/images/hero-image_2-small.jpg" 1x);
-      background-image: -webkit-image-set(url("../public/images/hero-image_2-small.jpg") 1x);
-      background-image: image-set("../public/images/hero-image_2-small.jpg" 1x);
     }
   }
   
